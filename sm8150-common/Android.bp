@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2020 YAAP
+ * Copyright (C) 2019-2020 MSM-Xtended
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,26 +39,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libplatformconfig",
-	owner: "oneplus",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libplatformconfig.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libplatformconfig.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libsdm-disp-vndapis",
 	owner: "oneplus",
 	strip: {
@@ -70,26 +50,6 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libsdm-disp-vndapis.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.capabilityconfigstore@1.0",
-	owner: "oneplus",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so"],
 		},
 	},
 	compile_multilib: "both",
